@@ -7,7 +7,6 @@ class DepartureBoard extends Component {
     return (
       <div>
         <h4>DepartureBoard</h4>
-
         <Trains />
       </div>
     )

@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
-import Network from './Network'
-import Prediction from './Prediction'
+import Network from './components/Network'
+import Prediction from './components/Prediction'
 
 
 class Main extends Component {
   render() {
     return (
       <div>
-        {/* reuse the components */}
         <Network />
         <Prediction />
       </div>

@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
+import DepartureBoard from './DepartureBoard'
 
 class Prediction extends Component {
-  render() {
+  render () {
     return (
       <div>
         <h3>Prediction Component</h3>
-        <p>
-          Departure boards here
-        </p>
+        <DepartureBoard />
+        <DepartureBoard />
       </div>
     )
   }

@@ -5,7 +5,7 @@ class Network extends Component {
   render () {
 
     const stationsList = this.props.stations.map((name, index) => <Line key={index} station={name} />)
-
+    
     return (
       <div>
         {

@@ -4,10 +4,19 @@ import Trains from './Trains'
 class DepartureBoard extends Component {
 
   render () {
+    const data = this.props.data
+    const trainList = data.map(({id, ...train}) => {
+      return (
+        <Trains train={train} key={id} />
+      )
+    })
+
     return (
       <div>
         <h4>DepartureBoard</h4>
-        <Trains />
+        <ul>
+          {trainList}
+        </ul>
       </div>
     )
   }

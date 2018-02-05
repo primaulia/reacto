@@ -7,7 +7,7 @@ class Line extends Component {
       <div>
         { this.props.station }
         <br />
-        <Button color="info">Go</Button>
+        <Button color="info" size="sm">Go</Button>
       </div>
     )
   }

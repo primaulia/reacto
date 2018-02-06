@@ -3,11 +3,10 @@ import DepartureBoard from './DepartureBoard'
 
 const Prediction = (props) => {
   return (
-      <div>
-        <h3>Prediction Component</h3>
-
-        <DepartureBoard {...props} />
-      </div>
+    <div>
+      <h3>Train Schedule</h3>
+      <DepartureBoard {...props} />
+    </div>
   )
 }
 

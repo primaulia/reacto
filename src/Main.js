@@ -13,7 +13,8 @@ class Main extends Component {
   constructor() {
     super()
     this.state = {
-      keyword: 'Search'
+      keyword: 'Search',
+      trains: trainsData
     } // can only set the initial state here
   }
 
@@ -21,12 +22,14 @@ class Main extends Component {
     // if change happened
     // get the new title from input field
     // change the state
-    console.log('type')
-
     let newTitle = evt.target.value || 'Search'
+    let filteredTrainsDate = this.state.trains.filter(train => {
+      return train.from.toLowerCase().includes(newTitle.toLowerCase())
+    })
 
     this.setState({ // `this` =>
-      keyword: newTitle
+      keyword: newTitle,
+      trains: filteredTrainsDate.length ? filteredTrainsDate : trainsData
     })
   }
 
@@ -41,7 +44,7 @@ class Main extends Component {
             </Col>
             <Col md="auto">
               <Prediction
-                data={trainsData}
+                data={this.state.trains}
                 boardTitle={this.state.keyword}
               />
             </Col>

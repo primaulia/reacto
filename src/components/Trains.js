@@ -1,14 +1,13 @@
 import React from 'react'
 
-const Trains = ({train}) => {
+const Trains = ({id, name, from, to}) => {
   return (
-    <li>
-      <h4>{ train.name }</h4>
-      <p>
-        From: { train.from }<br />
-        To: { train.to }
-      </p>
-    </li>
+    <tr>
+      <th>{ id }</th>
+      <td>{ name }</td>
+      <td>{ from }</td>
+      <td>{ to }</td>
+    </tr>
   )
 }
 

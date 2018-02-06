@@ -1,26 +1,34 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Table } from 'reactstrap'
+
 import Trains from './Trains'
 
-class DepartureBoard extends Component {
-
-  render () {
-    const data = this.props.data
-    const trainList = data.map(({id, ...train}) => {
-      return (
-        <Trains train={train} key={id} />
-      )
-    })
-
+const DepartureBoard = (props) => {
+  const data = props.data
+  const trainList = data.map(({...train}) => {
     return (
-      <div>
-        <h4>{this.props.boardTitle}</h4>
-        <ul>
-          {trainList}
-        </ul>
-      </div>
+      <Trains {...train} key={train.id} />
     )
-  }
+  })
 
+  return (
+    <div>
+      <h4>Departure</h4>
+      <Table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>From</th>
+            <th>To</th>
+          </tr>
+        </thead>
+        <tbody>
+          {trainList}
+        </tbody>
+      </Table>
+    </div>
+  )
 }
 
 export default DepartureBoard

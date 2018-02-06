@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Container, Row, Col} from 'reactstrap'
 
 import Navbar from './components/Navbar'
-import Network from './components/Network'
+// import Network from './components/Network', commented as it's unused
 import Prediction from './components/Prediction'
 import SearchBar from './components/SearchBar'
 
@@ -42,7 +42,7 @@ class Main extends Component {
             <Col xs="12" md="3">
               <SearchBar searchTitle="Search" searchMethod={this.handleChange} />
             </Col>
-            <Col md="auto">
+            <Col md="9">
               <Prediction
                 data={this.state.trains}
                 boardTitle={this.state.keyword}

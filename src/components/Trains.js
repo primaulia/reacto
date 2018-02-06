@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'reactstrap';
 
 const Trains = ({id, name, from, to}) => {
   return (
@@ -7,6 +8,7 @@ const Trains = ({id, name, from, to}) => {
       <td>{ name }</td>
       <td>{ from }</td>
       <td>{ to }</td>
+      <td><Button outline color="info" size="sm">+</Button></td>
     </tr>
   )
 }

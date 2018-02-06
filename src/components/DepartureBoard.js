@@ -21,6 +21,7 @@ const DepartureBoard = (props) => {
             <th>Name</th>
             <th>From</th>
             <th>To</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>

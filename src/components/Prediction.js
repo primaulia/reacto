@@ -1,18 +1,14 @@
-import React, {Component} from 'react'
+import React from 'react'
 import DepartureBoard from './DepartureBoard'
 
-class Prediction extends Component {
-  render () {
-
-
-    return (
+const Prediction = (props) => {
+  return (
       <div>
         <h3>Prediction Component</h3>
 
-        <DepartureBoard {...this.props} />
+        <DepartureBoard {...props} />
       </div>
-    )
-  }
+  )
 }
 
 export default Prediction

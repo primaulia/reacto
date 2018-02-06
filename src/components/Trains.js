@@ -1,21 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Trains extends Component {
-
-  render () {
-    let {from, name, to} = this.props.train
-
-    return (
-      <li>
-        <h4>{ name }</h4>
-        <p>
-          From: { from }<br/>
-          To: { to }
-        </p>
-      </li>
-    )
-  }
-
+const Trains = ({train}) => {
+  return (
+    <li>
+      <h4>{ train.name }</h4>
+      <p>
+        From: { train.from }<br />
+        To: { train.to }
+      </p>
+    </li>
+  )
 }
 
 export default Trains

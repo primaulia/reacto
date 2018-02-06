@@ -13,7 +13,7 @@ class DepartureBoard extends Component {
 
     return (
       <div>
-        <h4>DepartureBoard</h4>
+        <h4>{this.props.boardTitle}</h4>
         <ul>
           {trainList}
         </ul>

@@ -23,4 +23,10 @@ export default [
     "from": "Toa Payoh",
     "to": "Bishan"
   },
+  {
+    "id": "123325",
+    "name": "Train #5",
+    "from": "Bishan",
+    "to": "Ang Mo Kio"
+  },
 ]

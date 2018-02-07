@@ -1,8 +1,6 @@
 import React from 'react'
 import { Table } from 'reactstrap'
 
-import trainsData from '../data/trains'
-
 const SavedTrains = ({ savedTrains }) => {
   const savedTrainsList = savedTrains.map(train => {
     return (

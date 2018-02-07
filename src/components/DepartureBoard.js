@@ -7,7 +7,7 @@ const DepartureBoard = (props) => {
   const data = props.data
   const trainList = data.map(({...train}) => {
     return (
-      <Trains {...train} key={train.id} />
+      <Trains onAdd={props.saveMethod} {...train} key={train.id} />
     )
   })
 

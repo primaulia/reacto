@@ -1,14 +1,18 @@
 import React from 'react'
 import { Button } from 'reactstrap';
 
-const Trains = ({id, name, from, to}) => {
+const Trains = (props) => {
   return (
     <tr>
-      <th>{ id }</th>
-      <td>{ name }</td>
-      <td>{ from }</td>
-      <td>{ to }</td>
-      <td><Button outline color="info" size="sm">+</Button></td>
+      <th>{ props.id }</th>
+      <td>{ props.name }</td>
+      <td>{ props.from }</td>
+      <td>{ props.to }</td>
+      <td>
+        <Button outline color="info" size="sm"
+          onClick={() => props.onAdd(props.id)}
+        >+</Button>
+      </td>
     </tr>
   )
 }

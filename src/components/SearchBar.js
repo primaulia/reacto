@@ -1,10 +1,10 @@
 import React from 'react'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
+import { Form, FormGroup, Input } from 'reactstrap'
 
 const SearchBar = (props) => {
   return (
     <div>
-      <h1>{props.searchTitle}</h1>
+      <h2>{props.searchTitle}</h2>
       <Form>
         <FormGroup>
           <Input id="searchKeyword" type="text" name="text" placeholder="Type your station" onChange={props.searchMethod} />
